@@ -27,7 +27,7 @@ import mnist_dataset
 
 
 
-def save_int8_frezon_pb(q_model, path):
+def save_int8_frozen_pb(q_model, path):
     from tensorflow.python.platform import gfile
     f = gfile.GFile(path, 'wb')
     f.write(q_model.as_graph_def().SerializeToString())
@@ -66,8 +66,8 @@ def auto_tune(input_graph_path, yaml_config, batch_size):
 
 yaml_file = "alexnet.yaml"
 batch_size = 200
-fp32_frezon_pb_file = "fp32_frezon.pb"
+fp32_frozen_pb_file = "fp32_frozen.pb"
 int8_pb_file = "alexnet_int8_model.pb"
 
-q_model = auto_tune(fp32_frezon_pb_file, yaml_file, batch_size)
-save_int8_frezon_pb(q_model, int8_pb_file)
+q_model = auto_tune(fp32_frozen_pb_file, yaml_file, batch_size)
+save_int8_frozen_pb(q_model, int8_pb_file)

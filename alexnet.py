@@ -24,7 +24,7 @@ def load_mod(model_file):
     print('Load from {}'.format(model_file))
     return model
 
-def save_frezon_pb(model, mod_path):
+def save_frozen_pb(model, mod_path):
     # Convert Keras model to ConcreteFunction
     full_model = tf.function(lambda x: model(x))
     concrete_function = full_model.get_concrete_function(

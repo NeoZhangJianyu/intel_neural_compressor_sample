@@ -57,7 +57,7 @@ Set the input node name is "x".
 """
 from tensorflow.python.framework.convert_to_constants import convert_variables_to_constants_v2
 
-def save_frezon_pb(model, mod_path):
+def save_frozen_pb(model, mod_path):
     # Convert Keras model to ConcreteFunction
     full_model = tf.function(lambda x: model(x))
     concrete_function = full_model.get_concrete_function(
@@ -71,9 +71,9 @@ def save_frezon_pb(model, mod_path):
                       logdir=".",
                       name=mod_path,
                       as_text=False)
-fp32_frezon_pb_file = "fp32_frezon.pb"
-save_frezon_pb(model, fp32_frezon_pb_file)
+fp32_frozen_pb_file = "fp32_frozen.pb"
+save_frozen_pb(model, fp32_frozen_pb_file)
 
-os.system("ls -la fp32_frezon.pb")
+os.system("ls -la fp32_frozen.pb")
          
 
