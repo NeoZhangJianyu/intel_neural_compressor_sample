@@ -53,7 +53,7 @@ This demo could be executed on any Intel CPU. But it's recommended to use 2nd Ge
 Setup Conda running environment based on oneAPI:
 
 ```
-source /glob/development-tools/versions/oneapi/2022.1.1/oneapi/setvars.sh --force
+source ${ONEAPI_ROOT}/setvars.sh --force
 ./setup_env.sh
 ```
 
