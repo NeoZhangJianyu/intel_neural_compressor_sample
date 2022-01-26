@@ -1,3 +1,4 @@
+import os
 import tensorflow as tf
 print("Tensorflow version {}".format(tf.__version__))
 tf.compat.v1.enable_eager_execution()

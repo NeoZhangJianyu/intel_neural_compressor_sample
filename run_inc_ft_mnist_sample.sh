@@ -1,8 +1,9 @@
 #!/bin/bash
 
 echo "Enable Conda Env."
-source ${ONEAPI_ROOT}/oneapi/intelpython/python3.9/etc/profile.d/conda.sh
-conda activate user_tensorflow
+source /glob/development-tools/versions/oneapi/2022.1.1/oneapi/intelpython/python3.9/etc/profile.d/conda.sh
+#conda activate user_tensorflow
+conda activate /data/oneapi_workshop/INC
 
 echo "Train Model by Keras/Tensorflow with MNIST"
 python keras_tf_train_mnist.py
