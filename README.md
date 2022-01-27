@@ -1,4 +1,4 @@
-# `Intel® Neural Compressor` Sample for TensorFlow*
+# Intel® Neural Compressor Sample for TensorFlow*
 
 
 ## Background
@@ -123,6 +123,7 @@ Save to fp32_int8_times.png
 ```
 
 We will see the performance and accuracy of FP32 and INT8 model. The performance could be obviously increased if running on Xeon with VNNI.
+
 The demo creates figure files: fp32_int8_aboslute.png, fp32_int8_times.png to show performance bar. They could be used in report.
 
 
