@@ -22,7 +22,7 @@ This is a demo to show an End-To-End pipeline to build up a CNN model to recogni
 3. Compare the performance of FP32 and INT8 model by same script.
 
 
-We will learn the acceleration of AI infernce by Intel AI technoloy:
+We will learn the acceleration of AI inference by Intel AI technology:
 
 1. Intel® Deep Learning Boost
 
