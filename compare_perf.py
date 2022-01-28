@@ -59,7 +59,7 @@ t = ['FP32', 'INT8']
 x = [0, 1]
 plt.figure(figsize=(16,6))
 draw_bar(x, t, throughputs, 131, 'tab:green', 'Throughput(fps)', '', width=0.2)
-draw_bar(x, t,  latencys, 132, 'tab:blue', 'Latency(s)', '', width=0.2)
+draw_bar(x, t,  latencys, 132, 'tab:blue', 'Latency(ms)', '', width=0.2)
 draw_bar(x, t,  accuracys_perc, 133, '#28a99d', 'Accuracys(%)', '', width=0.2)
 plt.savefig("fp32_int8_aboslute.png")
 print("\nSave to fp32_int8_aboslute.png\n")
