@@ -39,7 +39,7 @@ We will learn the acceleration of AI inference by Intel AI technology:
 |Train a CNN AlexNet model|keras_tf_train_mnist.py|dataset: MNIST|fp32_frozen.pb|
 |Quantize the frozen PB model file|inc_quantize_model.py|dataset: MNIST<br>model: fp32_frozen.pb<br>yaml: alexnet.yaml|alexnet_int8_model.pb|
 |Test performance|profiling_inc.py|fp32_frozen.pb<br>alexnet_int8_model.pb|32.json<br>8.json|
-|Compare the performance|compare_perf.py|32.json<br>8.json|Log file<br>fp32_int8_aboslute.png<br>fp32_int8_times.png|
+|Compare the performance|compare_perf.py|32.json<br>8.json|stdout/stderr<br>log file<br>fp32_int8_aboslute.png<br>fp32_int8_times.png|
 
 **run_inc_ft_mnist_sample.sh** will call above python scripts to finish the demo.
 
