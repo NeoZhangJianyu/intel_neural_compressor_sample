@@ -99,9 +99,16 @@ source /opt/intel/oneapi/setvars.sh
 ./set_env.sh
 ```
 
+4. Create a new kernel for the Jupyter notebook based on your activated conda environment (Optional).
+
+```
+conda install ipykernel
+python -m ipykernel install --user --name usr_tensorflow
+``
+
 #### Install from Scrach by Conda
 
-Create Conda Envrionment: **user_tensorflow** in Intel channel.
+1. Create Conda Envrionment: **user_tensorflow** in Intel channel.
 
 ```
 conda create -n user_tensorflow -c intel python=3.9 -y
@@ -111,6 +118,12 @@ conda install -n user_tensorflow -c intel neural-compressor -y
 conda install -n user_tensorflow runipy notebook -y
 ```
 
+2. Create a new kernel for the Jupyter notebook based on your activated conda environment (Optional).
+
+```
+conda install ipykernel
+python -m ipykernel install --user --name usr_tensorflow
+```
 ## Update Script
 
 Edit **run_inc_ft_mnist_sample.sh** to set the Conda enviroment according to above result: **/data/oneapi_workshop/INC** or **user_tensorflow**.
