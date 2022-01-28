@@ -125,7 +125,6 @@ conda activate /data/oneapi_workshop/INC
 ...
 ```
 
-
 ## Run in Intel® DevCloud for oneAPI
 
 ### Run in Jupyter Notebook in Intel® DevCloud for oneAPI
@@ -204,6 +203,11 @@ We will see the performance and accuracy of FP32 and INT8 model. The performance
 
 The demo creates figure files: fp32_int8_aboslute.png, fp32_int8_times.png to show performance bar. They could be used in report.
 
+Copy files from DevCloud in host:
+
+```
+scp devcloud:~/intel_neural_compressor_sample/*.png ./
+```
 
 ## License
 
