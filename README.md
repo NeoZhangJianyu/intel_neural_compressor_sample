@@ -182,18 +182,17 @@ Check the result in log file: **run_inc_ft_mnist_sample.sh.o28029**:
 !tail -23 run_inc_ft_mnist_sample.sh.o1842253
 
 
-Compare the Performance of FP32 and INT8 Models
 Model            FP32                     INT8                    
-throughput(fps)  572.4982883964987        3218.52236638019        
-latency(ms)      2.8339174329018104       1.9863116497896156      
+throughput(fps)  572.4982883964987        3030.70552731285        
+latency(ms)      2.8339174329018104       2.128233714979522       
 accuracy(%)      0.9799                   0.9796                  
 
 Save to fp32_int8_aboslute.png
 
 Model            FP32                     INT8                    
-throughput_times 1                        5.621889936815179       
-latency_times    1                        0.7009066766478504      
-accuracy_diff(%) 0                        -0.029999999999986926   
+throughput_times 1                        5.293824608282245       
+latency_times    1                        0.7509864932092611      
+accuracy_times   1                        0.9996938463108482      
 
 Save to fp32_int8_times.png
 Please check the PNG files to see the performance!
