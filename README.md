@@ -104,7 +104,7 @@ source /opt/intel/oneapi/setvars.sh
 ```
 conda install ipykernel
 python -m ipykernel install --user --name usr_tensorflow
-``
+```
 
 #### Install from Scrach by Conda
 
