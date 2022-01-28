@@ -9,7 +9,7 @@ def autolabel(ax, rects):
     for rect in rects:
         height = rect.get_height()
         ax.text(rect.get_x() + rect.get_width()/2., 1.05*height,
-                '%0.2f' % float(height),
+                '%0.4f' % float(height),
         ha='center', va='bottom')
 
 def draw_bar(x, t, y, subplot, color, x_lab, y_lab, width=0.2):
@@ -66,17 +66,17 @@ print("\nSave to fp32_int8_aboslute.png\n")
 
 throughputs_times = [1, throughputs[1]/throughputs[0]]
 latencys_times = [1, latencys[1]/latencys[0]]
-accuracys_times = [0, accuracys_perc[1] - accuracys_perc[0]]
+accuracys_times = [1, accuracys_perc[1]/accuracys_perc[0]]
 
 format_print('Model', ['FP32', 'INT8'])
 format_print('throughput_times', throughputs_times)
 format_print('latency_times', latencys_times)
-format_print('accuracy_diff(%)', accuracys_times)
+format_print('accuracy_times', accuracys_times)
 
 plt.figure(figsize=(16,6))
 draw_bar(x, t, throughputs_times, 131, 'tab:green', 'Throughput Normalized (big is better)', '', width=0.2)
 draw_bar(x, t, latencys_times, 132, 'tab:blue', 'Latency Normalized (small is better)', '', width=0.2)
-draw_bar(x, t, accuracys_times, 133, '#28a99d', 'Accuracys Loss Diff (%)', '', width=0.2)
+draw_bar(x, t, accuracys_times, 133, '#28a99d', 'Accuracys Normalized (small is better)', '', width=0.2)
 
 plt.savefig("fp32_int8_times.png")
 print("\nSave to fp32_int8_times.png")
