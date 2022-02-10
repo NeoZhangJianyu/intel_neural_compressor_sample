@@ -34,7 +34,7 @@ def format_print(name, values):
     a = fix_len(a, 24)
     b = fix_len(b, 24)
         
-    print(name, a, b)
+    print("{}{}{}".format(name, a, b))
     
 def load_res(json_file):
     with open(json_file) as f:
